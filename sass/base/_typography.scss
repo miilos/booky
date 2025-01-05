@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+.title {
+  font-size: 4rem;
+  width: max-content;
+  margin-bottom: 1rem;
+  position: relative;
+
+  @media screen and (max-width: $bp-small) {
+    width: fit-content;
+  }
+
+  &::before {
+    content: "";
+    width: 75%;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+.highlight {
+  padding: 0.5rem;
+  background-color: $color-accent-red;
+  font-weight: bold;
+}

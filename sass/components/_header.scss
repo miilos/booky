@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  height: min-content;
+  width: 100vw;
+  padding: 0 2rem;
+  background-color: $color-primary-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  @include flex($justify: space-between);
+
+  &__left {
+    @include flex($gap: 1rem);
+  }
+
+  &__link {
+    position: relative;
+
+    &__item-count {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: $color-accent-red;
+      position: absolute;
+      top: -25%;
+      right: -10%;
+
+      @include flex();
+    }
+  }
+
+  & span {
+    color: $color-primary-dark;
+    margin-right: 1rem;
+  }
+}
+
+.open-btn {
+  cursor: pointer;
+}

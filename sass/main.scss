@@ -1,0 +1,17 @@
+@use "base/reset";
+@use "base/typography";
+
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "pages/book-details";
+
+@use "components/logo";
+@use "components/header";
+@use "components/menu";
+@use "components/banner";
+@use "components/buttons";
+@use "components/book-track";
+@use "components/book";
+@use "components/genres";
+@use "components/footer";

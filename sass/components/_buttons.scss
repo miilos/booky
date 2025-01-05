@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  font-size: 1.5rem;
+  padding: 1.2rem 2.8rem;
+  border-radius: 5rem;
+  text-decoration: none;
+
+  &--primary {
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

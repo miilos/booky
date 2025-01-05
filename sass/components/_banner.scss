@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.banner {
+  height: 70vh;
+  background-color: $color-primary-dark;
+  margin-top: 5rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: $bp-large) {
+    height: min-content;
+    grid-template-columns: 1fr;
+  }
+
+  &__text {
+    padding: 0 10rem;
+    color: $color-primary-light;
+
+    @include flex($align: flex-start, $direction: column, $gap: 2rem);
+
+    @media screen and (max-width: $bp-large) {
+      padding: 5rem;
+    }
+
+    @media screen and (max-width: $bp-smallest) {
+      padding: 5rem 2.5rem;
+    }
+
+    &-title {
+      font-size: 4rem;
+    }
+
+    &-p {
+      font-size: 2rem;
+    }
+  }
+
+  &__books {
+    @include flex();
+
+    &-container {
+      width: 50rem;
+      height: 35rem;
+
+      @include flex();
+
+      @media screen and (max-width: $bp-small) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.book {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &--1 {
+    height: 70%;
+    width: 15rem;
+    background-image: url("../img/prica_o_dva_grada.jpg");
+
+    @media screen and (max-width: $bp-small) {
+      width: 10rem;
+    }
+  }
+
+  &--2 {
+    height: 100%;
+    width: 22rem;
+    background-image: url("../img/ime_vetra.jpg");
+    z-index: 5;
+
+    @media screen and (max-width: $bp-small) {
+      width: 17rem;
+    }
+  }
+
+  &--3 {
+    height: 70%;
+    width: 15rem;
+    background-image: url("../img/zenica_sveta.jpg");
+
+    @media screen and (max-width: $bp-small) {
+      width: 10rem;
+    }
+  }
+}

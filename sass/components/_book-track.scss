@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.book__track {
+  padding: 2rem;
+
+  &-title {
+    font-size: 4rem;
+  }
+
+  &-books {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    @include flex($justify: flex-start, $gap: 2rem);
+  }
+}

@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.book__card {
+  min-width: 25rem;
+  height: 45rem;
+  background-color: $color-accent-coffee;
+  padding: 2rem;
+  position: relative;
+
+  &__img {
+    height: 55%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__text {
+    padding: 1rem 0;
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    &-author {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    &-price {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-top: 1rem;
+    }
+  }
+
+  &__cta {
+    display: block;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    bottom: 2rem;
+  }
+}
