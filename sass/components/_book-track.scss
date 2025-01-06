@@ -15,4 +15,12 @@
 
     @include flex($justify: flex-start, $gap: 2rem);
   }
+
+  &__err-message {
+    font-size: 2rem;
+  }
+}
+
+.showcase__container {
+  margin: 5rem 0;
 }

@@ -5,6 +5,8 @@
 @use "abstracts/mixins";
 
 @use "pages/book-details";
+@use "pages/about";
+@use "pages/contact";
 
 @use "components/logo";
 @use "components/header";
@@ -15,3 +17,4 @@
 @use "components/book";
 @use "components/genres";
 @use "components/footer";
+@use "components/search";

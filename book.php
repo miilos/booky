@@ -30,11 +30,16 @@
         <div class="book-details__main-info">
             <h1 class="title"><?php echo $book['title']; ?></h1>
 
-            <a href="#" class="book-details__main-info__author"><?php echo $book['author']; ?></a>
+            <?php $author_link = "./showcase.php?filter=author_id&value={$book['author_id']}"; ?>
+            <a href=<?php echo $author_link; ?> class="book-details__main-info__author"><?php echo $book['author']; ?></a>
 
             <p class="book-details__main-info__publisher"><?php echo $book['publisher']; ?></p>
 
-            <a href="#" class="book-details__main-info__genre"><?php echo $book['genre']; ?></a>
+            <?php
+                $link_genre = str_replace(' ', '+', $book['genre']);
+                $genre_link = "./showcase.php?filter=genre&value={$link_genre}";
+            ?>
+            <a href=<?php echo $genre_link; ?> class="book-details__main-info__genre"><?php echo $book['genre']; ?></a>
 
             <p class="book-details__main-info__summary"><?php echo $book['summary']; ?></p>
         </div>
@@ -95,6 +100,8 @@
     </div>
 
     <?php
+        get_similar_books($book['book_id']);
+
         include "views/footer.php";
     ?>
 

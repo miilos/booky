@@ -31,6 +31,20 @@
       font-size: 1.7rem;
       font-weight: 700;
       margin-top: 1rem;
+      display: inline-block;
+      margin-right: 1rem;
+      position: relative;
+
+      &--discounted {
+        &::before {
+          content: "";
+          width: 105%;
+          height: 2px;
+          background-color: $color-accent-red;
+          position: absolute;
+          top: 50%;
+        }
+      }
     }
   }
 

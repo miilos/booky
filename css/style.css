@@ -47,15 +47,43 @@ body {
   display: grid;
   grid-template-columns: min-content repeat(2, 1fr);
 }
+@media screen and (max-width: 1024px) {
+  .book-details {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-details {
+    height: min-content;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+  }
+}
 .book-details__img {
   width: 30rem;
+}
+@media screen and (max-width: 768px) {
+  .book-details__img {
+    width: 25rem;
+  }
 }
 .book-details__main-info {
   padding: 0 2rem;
 }
+@media screen and (max-width: 768px) {
+  .book-details__main-info {
+    text-align: center;
+  }
+}
 .book-details__main-info > h1 {
   font-weight: 800;
   margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .book-details__main-info > h1 {
+    margin: 0 auto;
+  }
 }
 .book-details__main-info__author {
   font-size: 2.2rem;
@@ -84,6 +112,22 @@ body {
 .book-details__main-info__summary {
   font-size: 1.3rem;
   width: 70%;
+}
+@media screen and (max-width: 1024px) {
+  .book-details__main-info__summary {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-details__main-info__summary {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .book-details__main-info__summary {
+    width: 100%;
+  }
 }
 .book-details__order {
   height: max-content;
@@ -129,6 +173,11 @@ body {
 .book-details__order__buy-section__form {
   margin-top: 5rem;
 }
+@media screen and (max-width: 768px) {
+  .book-details__order__buy-section__form {
+    text-align: center;
+  }
+}
 .book-details__order__buy-section__form-btn {
   padding: 1.2rem 1.7rem;
   border: none;
@@ -143,6 +192,71 @@ body {
 .book-details__order__buy-section__form-btn:hover {
   transform: scale(1.1);
   border: 1px solid #403831;
+}
+
+.about-container {
+  height: 90vh;
+  padding: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+
+.about {
+  padding: 2rem;
+  background-color: #f2be5c;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about {
+    width: 100%;
+  }
+}
+.about .title {
+  font-weight: 800;
+}
+.about__text {
+  font-size: 1.4rem;
+}
+
+.contact-container {
+  height: 90vh;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact {
+  width: 50%;
+  padding: 2rem;
+  border: 2px solid #f2be5c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.contact > * {
+  font-family: "Bodoni Moda", serif;
+  padding: 0.7rem;
+  width: 70%;
+  border: 1px solid #403831;
+}
+.contact__send-btn {
+  width: min-content;
+  border: none;
+  cursor: pointer;
 }
 
 .logo {
@@ -416,6 +530,13 @@ body {
   justify-content: flex-start;
   gap: 2rem;
 }
+.book__track__err-message {
+  font-size: 2rem;
+}
+
+.showcase__container {
+  margin: 5rem 0;
+}
 
 .book__card {
   min-width: 25rem;
@@ -444,6 +565,17 @@ body {
   font-size: 1.7rem;
   font-weight: 700;
   margin-top: 1rem;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+}
+.book__card__text-price--discounted::before {
+  content: "";
+  width: 105%;
+  height: 2px;
+  background-color: #c95149;
+  position: absolute;
+  top: 50%;
 }
 .book__card__cta {
   display: block;
@@ -544,6 +676,43 @@ body {
   font-size: 1.5rem;
   color: #403831;
   text-align: center;
+}
+
+.search-container {
+  height: 100vh;
+}
+
+.search {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.search__input {
+  width: 50%;
+  padding: 1rem;
+  border: 0.1rem solid #f2be5c;
+  font-family: "Bodoni Moda", serif;
+}
+@media screen and (max-width: 600px) {
+  .search__input {
+    width: 100%;
+  }
+}
+.search__input:focus {
+  outline: none;
+}
+.search__btn {
+  padding: 1rem 1.5rem;
+  background-color: #f2be5c;
+  border: none;
+  border-radius: 2rem;
+  font-family: "Bodoni Moda", serif;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,7 +28,7 @@
                 Ostvarite popuste od <span class="highlight">20 do 50%!</span>
             </p>
 
-            <a href="#" class="btn btn--primary banner__text-btn">Pogledaj popuste</a>
+            <a href="./showcase.php?discount=show" class="btn btn--primary banner__text-btn">Pogledaj popuste</a>
         </div>
 
         <div class="banner__books">
@@ -55,7 +55,7 @@
         <div class="genres__container">
             <div class="genres__container__genre genres__container__genre--fantasy">
                 <h1 class="title">Epska fantastika</h1>
-                <a href="#" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Epska+fantastika" class="genres__container__genre-link btn btn--primary">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right
@@ -64,7 +64,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--classics">
                 <h1 class="title">Klasici</h1>
-                <a href="#" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Klasici" class="genres__container__genre-link btn btn--primary">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right
@@ -73,7 +73,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--philosophy">
                 <h1 class="title">Filozofija</h1>
-                <a href="#" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Filozofija" class="genres__container__genre-link btn btn--primary">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right
@@ -82,7 +82,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--drama">
                 <h1 class="title">Drame</h1>
-                <a href="#" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Drama" class="genres__container__genre-link btn btn--primary">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right

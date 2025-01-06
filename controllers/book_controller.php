@@ -53,3 +53,33 @@ function get_book() {
     
     return $book;
 }
+
+function get_similar_books($book_id) {
+    $similar_books = get_similar_books_info($book_id);
+    display_book_track("Slični naslovi", $similar_books);
+}
+
+function get_showcase_books($filter, $value) {
+    $books = get_showcase_books_info($filter, $value);
+    $title = 'Nema podataka';
+
+    if($books) {
+        if($filter === 'author_id')
+            $title = $books[0]['author'];
+        
+        if($filter === 'genre')
+            $title = $value;
+    }
+
+    display_book_track($title, $books);
+}
+
+function get_discounted_books() {
+    $books = get_discounted_books_info();
+    display_book_track('Naslovi na popustu', $books);
+}
+
+function get_books_search($query) {
+    $books = get_books_search_info($query);
+    display_book_track('Rezultat pretrage', $books);
+}

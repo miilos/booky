@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about-container {
+  height: 90vh;
+  padding: 2rem;
+  margin-top: 5rem;
+
+  @include flex($align: flex-start);
+}
+
+.about {
+  padding: 2rem;
+  background-color: $color-primary-light;
+  width: 50%;
+
+  @media screen and (max-width: $bp-medium) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: $bp-smallest) {
+    width: 100%;
+  }
+
+  & .title {
+    font-weight: 800;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+}
