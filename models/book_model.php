@@ -88,3 +88,14 @@ function get_books_search_info($search_query) {
 
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 }
+
+function create_book($title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img) {
+    global $conn;
+
+    $query = "INSERT INTO books(title, summary, price, author_id, genre, publisher_id, num_pages, binding, pub_year, cover_img) 
+                VALUES('$title', '$summary', '$price', '$author_id', '$genre', '$publisher_id', '$num_pages', '$binding', '$pub_year', '$cover_img')";
+
+    $res = mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn) > 0;
+}

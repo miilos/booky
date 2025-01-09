@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.admin-container {
+  margin-top: 5rem;
+  height: 90vh;
+  overflow-x: auto;
+  padding: 2rem;
+
+  @media screen and (max-width: $bp-largest) {
+    height: min-content;
+    margin-top: 7rem;
+  }
+}
+
+.books {
+  font-size: 1.5rem;
+  border: 0.1rem solid $color-primary-dark;
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  @media screen and (max-width: $bp-largest) {
+    font-size: 1.2rem;
+  }
+
+  &__header,
+  &__data {
+    border: 0.1rem solid $color-primary-dark;
+    padding: 0.2rem;
+  }
+
+  &__header {
+    background-color: $color-classics;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: $color-accent-coffee;
+  }
+}
+
+.forms {
+  padding: 2rem;
+
+  @include flex($justify: flex-start, $gap: 3rem);
+
+  @media screen and (max-width: $bp-large) {
+    @include flex(
+      $align: flex-start,
+      $justify: flex-start,
+      $direction: column,
+      $gap: 1rem
+    );
+  }
+
+  & > form {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-input {
+  height: 100%;
+  border: 0.1rem solid $color-primary-light;
+  padding: 1rem;
+  font-family: "Bodoni Moda", serif;
+  margin-bottom: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.add-form {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.2rem solid $color-primary-light;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, min-content);
+  gap: 0.5rem 1rem;
+  align-items: center;
+
+  @media screen and (max-width: $bp-large) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    width: 100%;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, min-content);
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    grid-column: 1 / -1;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    font-family: "Bodoni Mona", serif;
+    border: 0.1rem solid $color-primary-light;
+    color: $color-primary-dark;
+    background-color: transparent;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    &__title {
+      grid-column: 1 / -1;
+    }
+
+    &__price {
+      grid-column: 1 / span 1;
+    }
+
+    &__genre {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__textarea {
+    height: 10rem;
+    grid-column: 1 / -1;
+  }
+
+  &__select {
+    &__author {
+      grid-column: 2 / 3;
+
+      @media screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+  }
+
+  &__err {
+    color: $color-accent-red;
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  &__success {
+    color: $color-philosphy;
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}

@@ -3,6 +3,16 @@
 include "models/book_model.php";
 include "views/book_track.php";
 
+function get_all_books() {
+    global $conn;
+
+    $query = "SELECT * FROM books";
+
+    $res = mysqli_query($conn, $query);
+
+    return mysqli_fetch_all($res, MYSQLI_ASSOC);
+}
+
 function get_editors_choice() {
     $editors_choice = array(
         "Ime vetra",
@@ -82,4 +92,9 @@ function get_discounted_books() {
 function get_books_search($query) {
     $books = get_books_search_info($query);
     display_book_track('Rezultat pretrage', $books);
+}
+
+function add_book($title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img) {
+    $status = create_book($title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img);
+    return $status;
 }

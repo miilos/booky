@@ -17,3 +17,16 @@
     }
   }
 }
+
+.form-btn {
+  padding: 1rem 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: $color-primary-light;
+  font-family: "Bodoni Moda", serif;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

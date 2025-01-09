@@ -5,7 +5,8 @@ function return_menu($active_link) {
         array('./index.php', 'Home'),
         array('./search.php', 'Pretraga'),
         array('./about.php', 'O nama'),
-        array('./contact.php', 'Kontaktirajte nas')
+        array('./contact.php', 'Kontaktirajte nas'),
+        array('./admin.php', 'Admin')
     );
     $menu_html = '
     <div class="menu">

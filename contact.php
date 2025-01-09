@@ -13,14 +13,14 @@
 <body>
     <?php
         include "views/menu.php";
-        return_menu(2);
+        return_menu(3);
 
         include "views/header.php";
     ?>
 
     <div class="contact-container">
         <h1 class="title title--dark">Kontaktirajte nas!</h1>
-        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="contact">
+        <form action="thank_you_page.php?src=msg" method="post" class="contact">
             <input type="text" name="name" id="name" placeholder="Ime">
             <input type="text" name="email" id="email" placeholder="E-mail">
             <textarea rows="10" name="message" id="message" placeholder="Poruka"></textarea>

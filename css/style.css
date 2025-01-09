@@ -259,6 +259,182 @@ body {
   cursor: pointer;
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.thank_you-title {
+  font-size: 4rem;
+}
+.thank_you-btn {
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.thank_you-btn span {
+  font-size: 1.5rem;
+}
+.thank_you-btn:hover {
+  gap: 0.5rem;
+}
+
+.admin-container {
+  margin-top: 5rem;
+  height: 90vh;
+  overflow-x: auto;
+  padding: 2rem;
+}
+@media screen and (max-width: 1280px) {
+  .admin-container {
+    height: min-content;
+    margin-top: 7rem;
+  }
+}
+
+.books {
+  font-size: 1.5rem;
+  border: 0.1rem solid #403831;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+  .books {
+    font-size: 1.2rem;
+  }
+}
+.books__header, .books__data {
+  border: 0.1rem solid #403831;
+  padding: 0.2rem;
+}
+.books__header {
+  background-color: #fbdfa9;
+}
+.books tr:nth-of-type(odd) {
+  background-color: #e1dddb;
+}
+
+.forms {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+@media screen and (max-width: 1024px) {
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+.forms > form {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  height: 100%;
+  border: 0.1rem solid #f2be5c;
+  padding: 1rem;
+  font-family: "Bodoni Moda", serif;
+  margin-bottom: 0.5rem;
+}
+.form-input:focus {
+  outline: none;
+}
+
+.add-form {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.2rem solid #f2be5c;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, min-content);
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .add-form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .add-form {
+    width: 100%;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, min-content);
+  }
+}
+.add-form__title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  grid-column: 1/-1;
+}
+.add-form__input, .add-form__textarea, .add-form__select {
+  font-family: "Bodoni Mona", serif;
+  border: 0.1rem solid #f2be5c;
+  color: #403831;
+  background-color: transparent;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.add-form__input:focus, .add-form__textarea:focus, .add-form__select:focus {
+  outline: none;
+}
+.add-form__input__title {
+  grid-column: 1/-1;
+}
+.add-form__input__price {
+  grid-column: 1/span 1;
+}
+.add-form__input__genre {
+  grid-column: 1/span 1;
+}
+.add-form__textarea {
+  height: 10rem;
+  grid-column: 1/-1;
+}
+.add-form__select__author {
+  grid-column: 2/3;
+}
+@media screen and (max-width: 600px) {
+  .add-form__select__author {
+    grid-column: 1/-1;
+  }
+}
+.add-form__btn {
+  grid-column: 1/-1;
+  justify-self: center;
+  width: 50%;
+}
+.add-form__err {
+  color: #c95149;
+  font-size: 2rem;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.add-form__success {
+  color: #519768;
+  font-size: 2rem;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
 .logo {
   font-size: 3.5rem;
   width: max-content;
@@ -512,6 +688,18 @@ body {
 }
 .btn--primary:hover {
   transform: scale(1.1);
+}
+
+.form-btn {
+  padding: 1rem 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: #f2be5c;
+  font-family: "Bodoni Moda", serif;
+  cursor: pointer;
+}
+.form-btn:focus {
+  outline: none;
 }
 
 .book__track {
