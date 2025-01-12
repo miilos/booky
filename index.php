@@ -40,8 +40,6 @@
         </div>
     </section>
 
-    
-
     <?php
         include "controllers/book_controller.php";
 
@@ -64,7 +62,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--classics">
                 <h1 class="title">Klasici</h1>
-                <a href="./showcase.php?filter=genre&value=Klasici" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Klasici" class="btn btn--primary btn--arrow">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right
@@ -73,7 +71,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--philosophy">
                 <h1 class="title">Filozofija</h1>
-                <a href="./showcase.php?filter=genre&value=Filozofija" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Filozofija" class="btn btn--primary btn--arrow">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right
@@ -82,7 +80,7 @@
             </div>
             <div class="genres__container__genre genres__container__genre--drama">
                 <h1 class="title">Drame</h1>
-                <a href="./showcase.php?filter=genre&value=Drama" class="genres__container__genre-link btn btn--primary">
+                <a href="./showcase.php?filter=genre&value=Drama" class="btn btn--primary btn--arrow">
                     Vidi
                     <span class="material-symbols-outlined">
                         chevron_right

@@ -70,12 +70,12 @@
             </form>
     
             <form action="update_book.php" method="get" class="form-update">
-                <input type="number" name="book_id" placeholder="Id knjige" class="form-input">
+                <input type="number" name="book_id" placeholder="Id knjige" class="form-input" required>
                 <input type="submit" value="Update knjige" class="form-btn">
             </form>
     
             <form action="delete_book.php" method="get" class="form-delete">
-                <input type="number" name="book_id" placeholder="Id knjige" class="form-input">
+                <input type="number" name="book_id" placeholder="Id knjige" class="form-input" required>
                 <input type="submit" value="Briši knjigu" class="form-btn">
             </form>
         </div>

@@ -4,13 +4,8 @@ include "models/book_model.php";
 include "views/book_track.php";
 
 function get_all_books() {
-    global $conn;
-
-    $query = "SELECT * FROM books";
-
-    $res = mysqli_query($conn, $query);
-
-    return mysqli_fetch_all($res, MYSQLI_ASSOC);
+    $books = get_all_books_info();
+    return $books;
 }
 
 function get_editors_choice() {
@@ -55,9 +50,13 @@ function get_best_sellers() {
     display_book_track("Best sellers", $books);
 }
 
-function get_book() {
-    $url_title = $_GET['title'];
-    $title = ucfirst(str_replace('_', ' ', $url_title));
+function get_book_by_id($id) {
+    $book = get_book_by_id_info($id);
+    return $book;
+}
+
+function get_book($title) {
+    $title = ucfirst(str_replace('_', ' ', $title));
 
     $book = get_full_book_info_from_title($title);
     
@@ -96,5 +95,15 @@ function get_books_search($query) {
 
 function add_book($title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img) {
     $status = create_book($title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img);
+    return $status;
+}
+
+function update_book($book_id, $title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img, $discount) {
+    $status = update_book_info($book_id, $title, $summary, $price, $author_id, $genre, $publisher_id, $num_pages, $binding, $pub_year, $cover_img, $discount);
+    return $status;
+}
+
+function delete_book($book_id) {
+    $status = delete_book_info($book_id);
     return $status;
 }

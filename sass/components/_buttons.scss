@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .btn {
   font-size: 1.5rem;
@@ -14,6 +15,14 @@
 
     &:hover {
       transform: scale(1.1);
+    }
+  }
+
+  &--arrow {
+    @include flex();
+
+    &:hover {
+      gap: 0.5rem;
     }
   }
 }

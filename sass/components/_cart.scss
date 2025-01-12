@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cart-container {
+  height: minmax(90vh, max-content);
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.cart-items {
+  width: 30%;
+}
+
+.cart-item {
+  width: 100%;
+  height: 15rem;
+  padding: 2rem;
+  border-bottom: 0.2rem solid $color-primary-dark;
+
+  @include flex($justify: flex-start, $gap: 1rem);
+
+  &:nth-of-type(odd) {
+    background-color: $color-classics;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    height: 100%;
+    padding-top: 1rem;
+
+    @include flex(
+      $align: flex-start,
+      $justify: flex-start,
+      $direction: column,
+      $gap: 0.5rem
+    );
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__author {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__price-container {
+    margin-left: auto;
+  }
+
+  &__price {
+    font-size: 2rem;
+
+    &--discounted {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 90%;
+        height: 3px;
+        background-color: $color-accent-red;
+        position: absolute;
+        top: 50%;
+      }
+    }
+  }
+}

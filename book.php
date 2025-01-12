@@ -1,7 +1,8 @@
 <?php
     include "controllers/book_controller.php";
 
-    $book = get_book();
+    $title = $_GET['title'];
+    $book = get_book($title);
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,10 @@
         return_menu(-1);
 
         include "views/header.php";
+
+        if($_SERVER['REQUEST_METHOD'] === "POST") {
+            array_push($_SESSION['books'], $_POST['book_id']);
+        }
     ?>
 
     <div class="book-details">

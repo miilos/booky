@@ -17,11 +17,21 @@
     @include flex($gap: 1rem);
   }
 
+  & .material-symbols-outlined {
+    color: $color-primary-dark;
+  }
+
   &__link {
     position: relative;
+    margin-right: 2rem;
+
+    @media screen and (max-width: $bp-large) {
+      margin-right: 0;
+    }
 
     &__item-count {
       display: block;
+      color: #fff;
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50%;
@@ -32,11 +42,6 @@
 
       @include flex();
     }
-  }
-
-  & span {
-    color: $color-primary-dark;
-    margin-right: 1rem;
   }
 }
 
