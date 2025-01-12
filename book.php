@@ -70,7 +70,7 @@
                     
                     <?php 
                         if($book['discount']) {
-                            $discounted_price = $book['price'] -  $book['price'] * ($book['discount'] / 100.0);
+                            $discounted_price = round($book['price'] -  $book['price'] * ($book['discount'] / 100.0), 2);
 
                             echo "
                             <h1 class=\"book-details__order__buy-section__price-text book-details__order__buy-section__price-text--discounted\">

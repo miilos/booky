@@ -30,7 +30,7 @@ function display_book_card($book) {
     $book_html = '';
     
     if($book['discount']) {
-        $discounted_price = $book['price'] -  $book['price'] * ($book['discount'] / 100.0);
+        $discounted_price = round($book['price'] -  $book['price'] * ($book['discount'] / 100.0), 2);
 
         $book_html = "
             <div class=\"book__card\">

@@ -952,13 +952,56 @@ body {
 }
 
 .cart-container {
-  height: minmax(90vh, max-content);
+  height: min-content;
   padding: 2rem;
   margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+@media screen and (max-width: 1024px) {
+  .cart-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cart {
+  width: 30%;
+}
+@media screen and (max-width: 1024px) {
+  .cart {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart {
+    width: 100%;
+  }
 }
 
 .cart-items {
-  width: 30%;
+  width: 100%;
+}
+.cart-items__clear {
+  padding: 0 2rem;
+}
+.cart-items__total {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.cart-items__total__p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.cart-items__total__price {
+  font-size: 2.2rem;
 }
 
 .cart-item {
@@ -1004,11 +1047,20 @@ body {
 }
 .cart-item__price--discounted::before {
   content: "";
-  width: 90%;
+  width: 105%;
   height: 3px;
   background-color: #c95149;
   position: absolute;
   top: 50%;
+}
+
+.empty-cart__msg {
+  font-size: 2rem;
+  height: 70vh;
+}
+
+.order-data-form {
+  margin: 0 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
