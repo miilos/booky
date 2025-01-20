@@ -16,7 +16,7 @@
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title><?php echo $filter ?></title>
+    <title><?php echo $value ?> | Booky</title>
 </head>
 <body>
     <?php

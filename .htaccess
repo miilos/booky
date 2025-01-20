@@ -1,0 +1,6 @@
+<FilesMatch "^(admin|add_book_msg|add_book|delete_book|update_book|update_msg).php$">
+AuthName "Member Only"
+AuthType Basic
+AuthUserFile C:/xampp/htdocs/booky/.htpasswd
+require valid-user
+</FilesMatch> 

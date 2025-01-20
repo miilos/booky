@@ -24,6 +24,9 @@
 
         include "views/header.php";
 
+        if(!$book)
+            exit();
+
         if($_SERVER['REQUEST_METHOD'] === "POST") {
             array_push($_SESSION['books'], $_POST['book_id']);
         }

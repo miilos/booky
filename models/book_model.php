@@ -15,10 +15,13 @@ function get_all_books_info() {
 function get_book_by_id_info($id) {
     global $conn;
     
-    $query = "SELECT b.book_id, b.summary, b.title, b.price, a.author_id, CONCAT(a.first_name, ' ', a.last_name) AS author, 
-                b.cover_img, b.discount
+    $query = "SELECT b.author_id, b.book_id, b.title, b.summary, b.price, b.discount, b.genre, p.name AS publisher, b.publisher_id,
+                b.num_pages, b.binding, b.pub_year, b.cover_img,
+                CONCAT(a.first_name, ' ', a.last_name) AS author
                 FROM books b INNER JOIN authors a
                 ON b.author_id = a.author_id
+                INNER JOIN publishers p
+                ON b.publisher_id = p.pub_id
                 WHERE book_id={$id}";
 
     $res = mysqli_query($conn, $query);
